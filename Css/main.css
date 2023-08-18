@@ -7,10 +7,12 @@
 :root {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 
     /*VARIABLES*/
     --text-color: #6C6C6C;
     --body-text-color: #0a0a0a;
+    --accent-green: #133416;
     --accent-blue: #88AED0;
 }
 
@@ -62,6 +64,7 @@ nav .mobile-menu {
     background-color: ghostwhite;
     border-radius: 1.2rem;
     box-shadow: 3px 3px 20px 5px #0000000f;
+    transition: ease-in 0.5ms;
 }
 
 .mobile-menu .category {
@@ -115,6 +118,7 @@ main {
 
 .hero .text {
     color: var(--body-text-color);
+    font-weight: 800;
 }
 
 .hero .text span {
@@ -133,8 +137,103 @@ main {
     border-radius: .3rem;
     padding: 1rem 2rem;
     color: #fff;
-    background-color: #133416;
+    background-color: var(--accent-green);
     font-size: .9rem;
     font-weight: 600;
     cursor: pointer;
+}
+
+.hero .ratings {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: .9rem;
+}
+
+.ratings p {
+    font-size: .97rem;
+    color: var(--body-text-color);
+}
+
+.ratings .icons {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.ratings .icons > img {
+    height: 1.3rem;
+}
+
+main .companies {
+    margin-top: 5rem;
+}
+
+.companies p {
+    text-align: center;
+    color: var(--accent-green);
+    margin-bottom: 1.7rem;
+    font-weight: 500;
+}
+
+.companies .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.companies .icons > img {
+    height: 3.5rem;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .navbar .logo {
+        height: 3rem;
+    }
+    .navbar .menu-bar {
+        height: 2.5rem;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr;
+        gap: 2rem;
+    }
+
+    .hero .text {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero .cta {
+        font-size: 1rem;
+    }
+
+    .hero .right-column {
+        display: block;
+    }
+
+    main .companies {
+        margin-top: 7rem;
+    }
+    .companies .icons {
+        flex-wrap: nowrap;
+        place-content: center;
+    }
+    .companies .icons > img {
+        height: 3rem;
+    }
+    .companies p {
+        font-size: 1.3rem;
+    }
 }
