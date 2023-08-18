@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+
+    /*VARIABLES*/
+    --text-color: #6C6C6C;
+    --body-text-color: #0a0a0a;
+    --accent-blue: #88AED0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #F3EDE5;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .logo, .menu-bar {
+    height: 2.2rem;
+    width: auto;
+}
+
+.navbar .menu-bar {
+    height: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+nav .mobile-menu {
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    background-color: ghostwhite;
+    border-radius: 1.2rem;
+    box-shadow: 3px 3px 20px 5px #0000000f;
+}
+
+.mobile-menu .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+} 
+
+.mobile-menu .category h4 {
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.mobile-menu .items {
+    display: grid;
+    gap: 1rem;
+}
+
+.mobile-menu .items > .item {
+    display: flex;
+    gap: .6rem;
+}
+
+.item > img {
+    align-self: baseline;
+    width: auto;
+}
+
+.mobile-menu .items h5 {
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.mobile-menu .items p {
+    color: var(--text-color);
+    font-size: .95rem;
+    line-height: 1.4;
+    padding-top: .2rem;
+}
+
+#close-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+main {
+    margin-top: 4rem;
+}
+
+.hero .text {
+    color: var(--body-text-color);
+}
+
+.hero .text span {
+    color: #F6AF00;
+}
+
+.hero p {
+    color: var(--text-color);
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.hero .cta {
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: .3rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: #133416;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
